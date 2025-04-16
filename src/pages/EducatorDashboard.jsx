@@ -10,7 +10,7 @@ export default function EducatorDashboard() {
 
   return (
     <div className="container mt-5">
-      <h3>Welcome, {userId}</h3>
+      <h3>Welcome to Coding Thinker, {userId}</h3>
       <p>You can create a new group and upload notes here.</p>
 
       {/* Floating "+" button */}
