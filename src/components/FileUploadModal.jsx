@@ -18,7 +18,7 @@ export default function FileUploadModal({ onClose }) {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxMdRYU29Oe8vuHeqJTpOCNUaWFKGVpo39w-tJSasDyQNbtH02dSQklXrNV59HBJrFYrg/exec",
+        "https://script.google.com/macros/s/AKfycbw65ZfeQnoohc6v9l5xQWxps3i7F09Oy2rz_n1ksBV0pv85Wl-ZwfWWLXXBYI0FMNRoEw/exec",
         {
           method: "POST",
           body: formData, // No Content-Type header needed!

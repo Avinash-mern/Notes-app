@@ -1,6 +1,7 @@
 // src/pages/EducatorDashboard.jsx
 import React, { useState } from 'react';
 import FileUploadModal from '../components/FileUploadModal';
+import FileList from '../components/FileList';
 
 export default function EducatorDashboard() {
   const [showModal, setShowModal] = useState(false);
