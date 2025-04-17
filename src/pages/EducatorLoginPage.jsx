@@ -6,6 +6,7 @@ import 'animate.css';
 export default function EducatorLoginPage() {
   const [userId, setUserId] = useState('');
   const [loading, setLoading] = useState(false);
+  const [educatorName, setEducatorName] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -23,6 +24,7 @@ export default function EducatorLoginPage() {
       alert('❌ Invalid UserID');
     } else if (data.role === 'educator') {
       localStorage.setItem('userId', data.userId);
+      localStorage.setItem('educatorName', educatorName);
       navigate('/educator-dashboard');
     } else {
       alert('⚠️ Invalid educator credentials');
@@ -57,6 +59,15 @@ export default function EducatorLoginPage() {
         ) : (
           <form onSubmit={handleLogin} className="animate__animated animate__fadeIn">
             <div className="mb-3">
+            <label className="form-label">Educator Name</label>
+              <input
+                type="text"
+                className="form-control custom-input"
+                placeholder="Enter your name"
+                value={educatorName}
+                onChange={(e) => setEducatorName(e.target.value)}
+                required
+              />
               <label className="form-label">User ID</label>
               <input
                 type="text"

@@ -6,6 +6,8 @@ import 'animate.css';
 export default function StudentLoginPage() {
   const [userId, setUserId] = useState('');
   const [loading, setLoading] = useState(false);
+  const [studentName, setStudentName] = useState(''); // 👈 new state
+
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -23,6 +25,7 @@ export default function StudentLoginPage() {
       alert('❌ Invalid UserID');
     } else if (data.role === 'student') {
       localStorage.setItem('userId', data.userId);
+      localStorage.setItem('studentName', studentName);
       navigate('/dashboard');
     } else {
       alert('⚠️ Invalid student credentials');
@@ -57,6 +60,15 @@ export default function StudentLoginPage() {
         ) : (
           <form onSubmit={handleLogin} className="animate__animated animate__fadeIn">
             <div className="mb-3">
+            <label className="form-label">Student Name</label>
+              <input
+                type="text"
+                className="form-control custom-input"
+                placeholder="Enter your name"
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value)}
+                required
+              />
               <label className="form-label">User ID</label>
               <input
                 type="text"

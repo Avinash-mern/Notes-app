@@ -5,6 +5,7 @@ import FileList from '../components/FileList';
 
 export default function EducatorDashboard() {
   const [showModal, setShowModal] = useState(false);
+  const educatorName = localStorage.getItem('educatorName');
   const userId = localStorage.getItem('userId');
 
   if (!userId) return <div className="text-center text-warning mt-5">⚠️ Please log in to continue</div>;
@@ -19,7 +20,8 @@ export default function EducatorDashboard() {
       }}
     >
       <div className="w-100 text-center mb-4">
-        <h2 className="fw-bold">Welcome to Coding Thinker, {userId} 👋</h2>
+      <h2 className="fw-bold">Welcome back, {educatorName || userId} 🎓</h2>
+
         <p className="lead">Upload and manage your notes effortlessly.</p>
       </div>
 

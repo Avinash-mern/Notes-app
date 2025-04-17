@@ -4,6 +4,7 @@ import FileList from '../components/FileList';
 
 export default function StudentDashboard() {
   const userId = localStorage.getItem('userId');
+  const studentName = localStorage.getItem('studentName');
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
@@ -31,7 +32,8 @@ export default function StudentDashboard() {
     >
       <div className="container animate__animated animate__fadeIn">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Welcome, {userId} 🎓</h2>
+        <h2 className="fw-bold">Welcome, {studentName || userId} 🎓</h2>
+
           <p className="lead">Explore all uploaded notes below</p>
         </div>
 
