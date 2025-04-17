@@ -1,6 +1,5 @@
 {
   "homepage": "https://Avinash-mern.github.io/",
-
   "name": "notes-sharing-app",
   "private": true,
   "version": "0.0.0",
@@ -12,9 +11,9 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

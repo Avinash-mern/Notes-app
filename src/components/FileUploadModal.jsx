@@ -68,6 +68,7 @@ export default function FileUploadModal({ onClose }) {
           <button className="btn btn-success me-2" onClick={handleUpload}>
             Upload
           </button>
+          <br /> 
           <button className="btn btn-secondary" onClick={onClose}>
             Cancel
           </button>
